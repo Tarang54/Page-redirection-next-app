@@ -15,7 +15,7 @@ interface Params{
   params:{ name : string };
 }
 
-export default async function Page({params} : Params ) {
+export default async function Page({ params }: { params: { name: string } } ) {
 
   const [age, gender, country  ] = await Promise.all([
     getPredictionAge(params.name),
