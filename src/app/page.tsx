@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <div>
-        <h1>Enter your name</h1>
+        <h1 className="text-[30px] font-bold">Enter your name</h1>
       </div>
       <form onSubmit={handleSubmit}>
         <input
