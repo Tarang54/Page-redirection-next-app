@@ -16,11 +16,12 @@ interface Params{
 }
 
 export default async function Page({params} : Params ) {
-  const predictAge = getPredictionAge(params.name);
-  const predictGender = getPredictionGender(params.name);
-  const predictCountry = getPredictionCountry(params.name);
 
-  const [age, gender, country  ] = await Promise.all([predictAge, predictGender, predictCountry]);
+  const [age, gender, country  ] = await Promise.all([
+    getPredictionAge(params.name),
+    getPredictionGender(params.name),
+    getPredictionCountry(params.name)
+  ]);
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen font-bold text-[35px]">
