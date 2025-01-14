@@ -11,10 +11,6 @@ const getPredictionCountry = async (name : string) => {
   return res.json();
 }
 
-interface Params{
-  params:{ name : string };
-}
-
 export default async function Page({ params }: { params: { name: string } } ) {
 
   const [age, gender, country  ] = await Promise.all([
